@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+</head>
+<body>
+    <h1>Clientes</h1>
+    <table border="1px solid black">
+        <thead>
+            <th>id</th>
+            <th>nit</th>
+            <th>nombres</th>
+            <th>Apellidos</th>
+            <th>Dirección</th>
+            <th>Telefono</th>
+            <th>Fecha nacimiento</th>
+        </thead>
+        <tbody>
+            <% resultado.forEach((cliente) => { %> 
+                <tr>
+                    <td><%= cliente.id_cliente%></td>
+                    <td><%= cliente.nit%></td>
+                    <td><%= cliente.nombres %></td>
+                    <td><%= cliente.apellidos%></td>
+                    <td><%= cliente.direccion%></td>
+                    <td><%= cliente.telefono%></td>
+                    <td><%= cliente.fecha_nacimiento%></td>
+                </tr>            
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
