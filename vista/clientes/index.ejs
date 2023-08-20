@@ -7,6 +7,18 @@
 </head>
 <body>
     <h1>Clientes</h1>
+    <form action="/crud_c" method="post">
+        <input type="text" id="txt_id" name="txt_id" placeholder="id">
+        <input type="text" id="txt_nit" name="txt_nit" placeholder="nit">
+        <input type="text" id="txt_nombres" name="txt_nombres" placeholder="Nombres">
+        <input type="text" id="txt_apellidos" name="txt_apellidos" placeholder="Apellidos">
+        <input type="text" id="txt_direccion" name="txt_direccion" placeholder="Dirección">
+        <input type="text" id="txt_telefono" name="txt_telefono" placeholder="Telefono">
+        <input type="date" id="txt_fn" name="txt_fn" placeholder="Fecha de nacimiento">
+        <button type="submit" id="btn_crear" name="btn_crear" value="crear">Crear</button>
+        <button type="submit" id="btn_actualizar" name="btn_actualizar" value="actualizar">Actualizar</button>
+        <button type="submit" id="btn_borrar" name="btn_borrar" value="borrar">Borrar</button>
+    </form>
     <table border="1px solid black">
         <thead>
             <th>id</th>
