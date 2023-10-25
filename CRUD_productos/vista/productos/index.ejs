@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+</head>
+<body>
+    <h1>Productos</h1>
+    <form action="/crud_c" method="post">
+        <input type="text" id="txt_id" name="txt_id" placeholder="id">
+        <input type="text" id="txt_producto" name="txt_producto" placeholder="Producto">
+        <input type="text" id="txt_marca" name="txt_marca" placeholder="Marca">
+        <input type="text" id="txt_descripcion" name="txt_descripcion" placeholder="Descripción">
+        <input type="text" id="txt_precio_costo" name="txt_precio_costo" placeholder="Precio costo">
+        <input type="text" id="txt_precio_venta" name="txt_precio_venta" placeholder="Precio venta">
+        <input type="text" id="txt_existencia" name="txt_existencia" placeholder="Existencias">
+        <button type="submit" id="btn_crear" name="btn_crear" value="crear">Crear</button>
+        <button type="submit" id="btn_actualizar" name="btn_actualizar" value="actualizar">Actualizar</button>
+        <button type="submit" id="btn_borrar" name="btn_borrar" value="borrar">Borrar</button>
+    </form>
+    <table border="1px solid black">
+        <thead>
+            <th>id</th>
+            <th>Producto</th>
+            <th>Marca</th>
+            <th>Descripción</th>
+            <th>Precio costo</th>
+            <th>Precio venta</th>
+            <th>Existencias</th>
+        </thead>
+        <tbody>
+            <% resultado.forEach((producto) => { %> 
+                <tr>
+                    <td><%= producto.id_producto%></td>
+                    <td><%= producto.producto%></td>
+                    <td><%= producto.id_marca%></td>
+                    <td><%= producto.descripcion%></td>
+                    <td><%= producto.precio_costo%></td>
+                    <td><%= producto.precio_venta%></td>
+                    <td><%= producto.existencia%></td>
+                </tr>            
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
